@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+/*  BROAD selector */
+/*  --------------------------------------- */
+:root {
+    --grey-color: #444647;
+    --white-color: rgb(235, 235, 235);
+}
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    color: black;
+    /* border: 1px solid black; */
+}
+body {
+    background-color: white;
+    font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+}
+/*  --------------------------------------- */
+
+
+/*  CLASS selector */
+/*  --------------------------------------- */
+.button-appearance {
+    background-color: var(--grey-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 9px;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+}
+.button-appearance:hover {
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color);
+}
+.divider {
+    width: 0;
+    height: 70%;
+    display: inline;
+    border-right: 2px solid black;
+}
+/*  --------------------------------------- */
+
+
+/*  SPECIFIC selector */
+/*  --------------------------------------- */
+#welcome {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 58% auto 41%;
+    align-items: center;
+}
+
+#welcome--lc {
+    text-align: right;
+    padding: 35px;
+    width: 100%;
+}
+#lc--profile-picture {
+    border-radius: 25px;
+    width: 120px;
+    height: 120px;
+}
+#lc--name {
+    font-size: 45px;
+}
+#lc--dev-icons {
+    margin-top: 12px;
+}
+
+#welcome--rc {
+    width: 100%;
+}
+#fc--more-info {
+    font-size: 20px;
+    text-align: center;
+}
+#fc--linktr {
+    margin: 15px 0;
+}
+#fc--linktr li {
+    list-style: none;
+    padding: 12px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  --------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+    #welcome {
+        display: flex;
+        flex-direction: column;
+    }
+    .divider {
+        display: none;
+    }
+    #welcome--lc {
+        text-align: center;
+    }
+}
