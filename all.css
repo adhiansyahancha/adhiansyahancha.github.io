@@ -72,7 +72,20 @@ body {
     font-size: 45px;
 }
 #lc--dev-icons {
-    margin-top: 12px;
+    margin-top: 18px;
+}
+#lc--dev-icons p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#lc--dev-icons a {
+    text-decoration: none;
+}
+#lc--dev-icons a:hover {
+    cursor: pointer;
+}
+#lc--dev-icons i {
+    margin: 0 5px;
 }
 
 #welcome--rc {
@@ -94,7 +107,7 @@ body {
 }
 /*  --------------------------------------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 570px) {
     #welcome {
         display: flex;
         flex-direction: column;
