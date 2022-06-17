@@ -85,7 +85,7 @@ body {
     cursor: pointer;
 }
 #lc--dev-icons i {
-    margin: 0 5px;
+    margin: 0 4px;
 }
 
 #welcome--rc {
@@ -96,7 +96,7 @@ body {
     text-align: center;
 }
 #fc--linktr {
-    margin: 15px 0;
+    margin: 14px 0;
 }
 #fc--linktr li {
     list-style: none;
