@@ -47,9 +47,8 @@ body {
     border-right: 2px solid black;
 }
 .smooth-transition {
-    transition-duration: 500ms;
-	transition-delay: 5ms;
-	transition-timing-function: ease-out;
+    transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.19,1,.22,1);
 }
 /*  --------------------------------------- */
 
@@ -94,7 +93,8 @@ body {
     transform: scale(1);
 }
 #lc--dev-icons i:hover {
-    transform: scale(1.5);
+    margin: 0 20px;
+    transform: scale(1.35);
 }
 
 #welcome--rc {
