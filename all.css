@@ -18,6 +18,10 @@ body {
     background-color: white;
     font-family: 'IBM Plex Sans', Helvetica, sans-serif;
 }
+section {
+    padding: 50px;
+    text-align: justify;
+}
 /*  --------------------------------------- */
 
 
@@ -27,10 +31,10 @@ body {
     background-color: var(--grey-color);
     color: var(--white-color);
     text-align: center;
-    padding: 9px;
+    padding: 10px;
     width: 100%;
     height: 45px;
-    border-radius: 8px;
+    border-radius: 15px;
     text-decoration: none;
     font-weight: 700;
     overflow: hidden;
@@ -49,6 +53,11 @@ body {
 .smooth-transition {
     transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(.19,1,.22,1);
+}
+.header-1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 /*  --------------------------------------- */
 
@@ -100,14 +109,15 @@ body {
 #welcome--rc {
     width: 100%;
 }
-#fc--more-info {
-    font-size: 20px;
+#rc--more-info {
+    font-size: 22px;
+    font-weight: bold;
     text-align: center;
 }
-#fc--linktr {
+#rc--linktr {
     margin: 14px 0;
 }
-#fc--linktr li {
+#rc--linktr li {
     list-style: none;
     padding: 12px 35px;
     display: flex;
@@ -117,7 +127,11 @@ body {
 /*  --------------------------------------- */
 
 @media only screen and (max-width: 570px) {
+    section {
+        padding: 35px;
+    }
     #welcome {
+        height: unset;
         display: flex;
         flex-direction: column;
     }
@@ -126,5 +140,11 @@ body {
     }
     #welcome--lc {
         text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
     }
 }
