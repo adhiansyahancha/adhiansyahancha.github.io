@@ -1,0 +1,144 @@
+/* Dihasilkan dari SASS/SCSS */
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  color: black;
+  /* border: 1px solid black; */
+}
+
+body {
+  background-color: white;
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+}
+
+section {
+  padding: 50px;
+  text-align: justify;
+}
+
+.button-appearance {
+  background-color: #444647;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 45px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  overflow: hidden;
+}
+.button-appearance:hover {
+  background-color: rgb(235, 235, 235);
+  color: #444647;
+  border: 1px solid #444647;
+}
+
+.divider {
+  width: 0;
+  height: 70%;
+  display: inline;
+  border-right: 2px solid black;
+}
+
+.smooth-transition {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#welcome {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 58% auto 41%;
+  align-items: center;
+}
+
+#left {
+  text-align: right;
+  padding: 35px;
+  width: 100%;
+}
+
+#pp {
+  border-radius: 25px;
+  width: 120px;
+  height: 120px;
+}
+
+#name {
+  font-size: 45px;
+}
+
+#myactivity {
+  margin-top: 18px;
+}
+#myactivity p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#myactivity a {
+  text-decoration: none;
+}
+#myactivity a:hover {
+  cursor: pointer;
+}
+#myactivity i {
+  margin: 0 6px;
+  transform: scale(1);
+}
+#myactivity i:hover {
+  margin: 0 20px;
+  transform: scale(1.35);
+}
+
+#right {
+  width: 100%;
+}
+
+#more-info {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#linktree {
+  margin: 14px 0;
+}
+#linktree li {
+  list-style: none;
+  padding: 12px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  --------------------------------------- */
+@media only screen and (max-width: 570px) {
+  section {
+    padding: 35px;
+  }
+  #welcome {
+    height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+  #left {
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}/*# sourceMappingURL=styles.css.map */
