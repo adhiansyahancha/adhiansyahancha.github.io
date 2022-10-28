@@ -67,7 +67,7 @@ section {
   width: 100%;
 }
 
-#pp {
+#profile-picture {
   border-radius: 25px;
   width: 120px;
   height: 120px;
@@ -109,10 +109,10 @@ section {
   text-align: center;
 }
 
-#linktree {
+#microsite {
   margin: 14px 0;
 }
-#linktree li {
+#microsite li {
   list-style: none;
   padding: 12px 35px;
   display: flex;
