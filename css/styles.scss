@@ -1,8 +1,9 @@
-/* Dihasilkan dari SASS/SCSS */
+/* Untuk mengedit gaya situs web edit melalui SCSS */
+/* Dirutkan menurut hirarki di HTML (kecuali selector *) */
 
 $fonts: 'IBM Plex Sans', Helvetica, sans-serif;
 $am-grey: #444647;
-$am-white: rgb(235, 235, 235);
+$am-white: rgb(242, 242, 242);
 
 * {
     box-sizing: border-box;
@@ -14,13 +15,53 @@ $am-white: rgb(235, 235, 235);
 }
 
 body {
-    background-color: white;
+    background-color: $am-white;
     font-family: $fonts;
 }
 
 section {
     padding: 50px;
     text-align: justify;
+}
+
+#welcome {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 58% auto 41%;
+    align-items: center;
+}
+
+#left {
+    text-align: right;
+    padding: 35px;
+    width: 100%;
+}
+
+.divider {
+    width: 0;
+    height: 70%;
+    display: inline;
+    border-right: 2px solid black;
+}
+
+#right {
+    width: 100%;
+}
+
+.ck-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #dddddd;
+    padding: 15px;
+    border-radius: 5px;
+
+    p {
+        margin-top: 5px;
+    }
+
+    ul {
+        margin-left: 15px;
+    }
 }
 
 
@@ -43,36 +84,15 @@ section {
     }
 }
 
-.divider {
-    width: 0;
-    height: 70%;
-    display: inline;
-    border-right: 2px solid black;
-}
-
 .smooth-transition {
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+    transition-timing-function: ease-out;
 }
 
 .h1 {
     font-size: 34px;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-
-#welcome {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 58% auto 41%;
-    align-items: center;
-}
-
-#left {
-    text-align: right;
-    padding: 35px;
-    width: 100%;
 }
 
 #profile-picture {
@@ -112,10 +132,6 @@ section {
     }
 }
 
-#right {
-    width: 100%;
-}
-
 #more-info {
     font-size: 22px;
     font-weight: bold;
@@ -123,7 +139,7 @@ section {
 }
 
 #microsite {
-    margin: 14px 0;
+    margin: 10px 0;
 
     li {
         list-style: none;
@@ -131,6 +147,7 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 }
 
