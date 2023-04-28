@@ -12,6 +12,7 @@
 body {
   background-color: rgb(242, 242, 242);
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
+  min-width: 300px;
 }
 
 section {
@@ -43,20 +44,6 @@ section {
   width: 100%;
 }
 
-.ck-container {
-  width: 70%;
-  margin: 0 auto;
-  background-color: #dddddd;
-  padding: 15px;
-  border-radius: 5px;
-}
-.ck-container p {
-  margin-top: 5px;
-}
-.ck-container ul {
-  margin-left: 15px;
-}
-
 .button-appearance {
   background-color: #444647;
   color: rgb(242, 242, 242);
@@ -76,14 +63,8 @@ section {
 }
 
 .smooth-transition {
-  transition-duration: 250ms;
+  transition-duration: 650ms;
   transition-timing-function: ease-out;
-}
-
-.h1 {
-  font-size: 34px;
-  font-weight: bold;
-  margin-bottom: 5px;
 }
 
 #profile-picture {
@@ -93,7 +74,12 @@ section {
 }
 
 #name {
-  font-size: 45px;
+  font-size: 40px;
+}
+
+#intro {
+  margin: 12px 0px 12px 12px 12px;
+  padding-left: 25%;
 }
 
 #myactivity {
@@ -137,7 +123,7 @@ section {
 }
 
 /*  --------------------------------------- */
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 600px) {
   section {
     padding: 35px;
   }
@@ -145,6 +131,10 @@ section {
     height: unset;
     display: flex;
     flex-direction: column;
+  }
+  #intro {
+    margin: 7px 0 0 0;
+    padding: unset;
   }
   .divider {
     display: none;

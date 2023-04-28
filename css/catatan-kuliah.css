@@ -1,0 +1,13 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #dddddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+.container p {
+  margin-top: 5px;
+}
+.container ul {
+  margin-left: 15px;
+}/*# sourceMappingURL=catatan-kuliah.css.map */
