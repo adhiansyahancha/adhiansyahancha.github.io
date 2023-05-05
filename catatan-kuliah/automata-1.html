@@ -11,8 +11,114 @@
         <link rel="stylesheet" type="text/css" href="../css/catatan-kuliah.css" />
         <link rel="stylesheet" type="text/css" href="../css/materi.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
+        <div class="preliminary">
+            <h2>Pemahaman pendahuluan yang membantu (opsional):</h2>
+            <ul>
+                <li>Himpunan</li>
+                <li>Logika</li>
+            </ul>
+        </div>
+        <br>
         <h1>Simbol, String, dan Alfabet</h1>
+        <p>Simbol dapat dimengerti sebagai <i>entitas abstrak</i> yang tidak didefinisikan secara formal. Ketika kita menulis "A", "S", atau "D" berarti kita menulis simbol karena kita tidak tahu apa arti dari simbol ini. Untuk membentuk arti, simbol-simbol dikumpulkan menjadi sebuah deretan yang berharga yang disebut string (\( w \)).</p>
+        <br>
+        <p>Dalam Teori Bahasa dan Automata, simbol string dipilih dari sebuah alfabet, yaitu himpunan terhingga non-kosong (<i>non-empty finite set</i>) dari simbol-simbol. Alfabet dinotasikan dengan \( \Sigma \). Dengan batasan seperti ini, untuk membuat string harus memilih simbol-simbol yang didfenisikan dalam alfabet. Untuk contohnya bisa dilihat di bawah berikut.</p>
+        <ul>
+            <li>Alfabet biner<br>\( \Sigma = \{0, 1\} \)<br>\( w = \) 01101, 111</li>
+            <li>Alfabet huruf kecil<br>\( \Sigma = \{a, b, c, ..., z\} \)<br>\( w = \) banyumas, moro</li>
+            <li>Alfabet semua karakter ASCII.</li>
+        </ul>
+        <p>String memiliki "panjang posisi" yang dilambangkan dengan \( |w| \). Contohnya, \(|01101| = 5 \). String "01101" hanya berisi dua simbol (0 dan 1), tetapi terdapat 5 posisi untuk simbol. String yang panjangnya nol (dalam artian lain, kosong) disebut string kosong (<i>empty string</i> atau <i>null string</i>). Jenis string ini dilambangkan dengan \( \epsilon \) (dan terkadang, \( \lambda \)).</p>
+        <br>
+        <h2>Operasi string</h2>
+        <p>Layaknya seperti operasi aritmetika, string juga memiliki operasi yang meliputi <code>concatenation()</code>, <code>alternate()</code> <code>substring()</code>, <code>subsequence()</code>, <code>prefix()</code>, dan <code>postfix()</code>. Untuk contohnya, kita akan definisikan dua string di bawah berikut.</p>
+        <ul>
+            <li><code> x = abc </code></li>
+            <li><code>y = 123</code></li>
+        </ul>
+        <p>Operasi-operasinya dijelaskan di bawah berikut.</p>
+        <ul>
+            <li><code>concatenation()</code>
+                <br>Menggabungkan dua string. <br>
+                <code>>>> concatenation(xy)<br>abc123</code>
+            </li>
+            <li>
+                <code>alternate()</code>
+                <br>Membuat pilihan antara dua string. <br>
+                <code>>>> alternate(xy)<br>abc | 123</code>
+            </li>
+            <li>
+                <code>substring()</code>
+                <br>Membuat string bagian (<i>sub</i>, dengan demikian namanya <i>substring</i>) dari nol atau lebih simbol string aslinya dengan mempertahankan terusan urutannya. <br>
+                \( \epsilon \), a, b, c, ab, bc, abc adalah semua <code>substring(x)</code>.
+            </li>
+            <li>
+                <code>subsequence()</code>
+                <br>Membuat string bagian dari nol atau lebih simbol string aslinya tetapi tidak memperhatikan kelanjutan urutannya. Meski demikian, urutannya tetap dipertahankan. <br>
+                \( \epsilon \), a, b, c, ab, bc, ac, abc adalah semua <code>subsequence(x).</code> "ac" di sini tidak valid di <code>substring(x)</code> karena tidak menerus urutannya (a -> b -> c).
+            </li>
+            <li>
+                <code>prefix()</code>
+                <br>Membuat string bagian dengan menghilangkan nol atau lebih simbol paling belakang. <br>
+                \( \epsilon \), a, ab, abc adalah semua <code>prefix(x)</code>.
+            </li>
+            <li>
+                <code>postfix()</code>
+                <br>Membuat string bagian dengan menghilangkan nol atau lebih simbol paling depan. <br>
+                \( \epsilon \), c, bc, abc adalah semua <code>postfix(x)</code>.
+            </li>
+        </ul>
+        <p>Terdapat juga versi <i>proper</i> untuk fungsi-fungsi di atas (selain <code>concatenation()</code> dan <code>alternate()</code>). Bedanya, <i>proper</i> mewajibkan string bagian benar-benar bagian dan tidak boleh sama persis dengan string asli. Contohnya, dalam bentuk <i>proper</i>, \( \{ a \} \) dan \( \{ a, b \} \) \( \subset \{ a, b, c \} \), tetapi \( \{ a, b, c \} \not\subset \{ a, b, c \} \).</p>
+        <ul>
+            <li>
+                <code>proper_substring()</code>
+                <br>Membuat string bagian (<i>sub</i>, dengan demikian namanya <i>substring</i>) dari satu atau lebih simbol string aslinya dengan mempertahankan terusan urutannya. <br>
+                \( \epsilon \), a, b, c, ab, bc adalah semua <code>proper_substring(x)</code>.
+            </li>
+            <li>
+                <code>proper_subsequence()</code>
+                <br>Membuat string bagian dari satu atau lebih simbol string aslinya tetapi tidak memperhatikan kelanjutan urutannya. Meski demikian, urutannya tetap dipertahankan. <br>
+                \( \epsilon \), a, b, c, ab, bc, ac adalah semua <code>proper_subsequence(x)</code>.
+            </li>
+            <li>
+                <code>proper_prefix()</code>
+                <br>Membuat string bagian dengan menghilangkan satu atau lebih simbol paling belakang. <br>
+                \( \epsilon \), a, ab adalah semua <code>proper_prefix(x)</code>.
+            </li>
+            <li>
+                <code>proper_postfix()</code>
+                <br>Membuat string bagian dengan menghilangkan satu atau lebih simbol paling depan. <br>
+                \( \epsilon \), c, bc adalah semua <code>proper_postfix(x)</code>.
+            </li>
+        </ul>
+        <br>
+        <h2>Pangkat dari alfabet</h2>
+        <p>Kita bisa menyatakan himpunan dari semua string dengan panjang tertentu dari sebuah alfabet dengan menggunakan notasi eksponen \( \Sigma^k \), di mana \( k \) adalah panjang. Untuk sebagai contoh, kita akan mendefinisikan \( \Sigma = \{0, 1\} \).</p>
+        <ul>
+            <li>\( \Sigma^0 = \{ \epsilon \} \) (Pangkat 0 akan selalu string kosong apapun itu alasannya)</li>
+            <li>\( \Sigma^1 = \{ 0, 1 \} \)</li>
+            <li>\( \Sigma^2 = \{ 00, 01, 10, 11 \} \)</li>
+            <li>\( \Sigma^3 = \{ 000, 001, 010, 011, 100, 101, 110, 111 \} \)</li>
+            <li>\( \Sigma^4 = \{ 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 \} \)</li>
+            <li>\( \Sigma^+ = \{ 0, 1, 00, 01, 10, 11, 000, 001, 010,... \} \)<br>\( \phantom{ \Sigma^+ } = \Sigma^1 \cup \Sigma^2 \cup \Sigma^3 \cup \Sigma^4 \cup \Sigma^5 \cup... \)</li>
+            <li>\( \Sigma^* = \{ \epsilon, 0, 1, 00, 01, 10, 11, 000, 001, 010,... \} \)<br>\( \phantom{ \Sigma^* } = \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \Sigma^3 \cup \Sigma^4 \cup \Sigma^5 \cup... \)<br>\( \phantom{ \Sigma^* } = \{ \epsilon \} \cup \Sigma^+ \)</li>
+        </ul>
+        <p>Notasi \( \Sigma^+ \) disebut <i>positive closure</i> dan \( \Sigma^* \) disebut <i>Kleene closure</i>. Perbedaan antara keduanya adalah <i>Kleene closure</i> memuat \( \epsilon \) atau string kosong (perhatikan daftar di atas tadi. Lihat perbedaannya?). <i>Kleene closure</i> diperkenalkan oleh matematikawan logika asal Amerika Serikat, Stephen Cole Kleene.</p>
+        <br>
+        <h2>Bahasa formal</h2>
+        <p>Bahasa atau dalam konteksnya, bahasa formal, adalah himpunan (yang mungkin tak terhingga) string. Bahasa dilambangkan dengan \( L \)  Sebelumnya kita mengenal bentuk pangkat alfabet yang bisa menyatakan himpunan string dengan panjang tertentu. Kita mendefinisikan \( \Sigma^* \) sebagai himpunan string dengan semua panjang yang mungkin dari \( \Sigma \). Karenanya, bahasa merupakan bagian dari \( \Sigma^* \).</p>
+        <br>
+        <p>Sebuah bahasa formal bisa ditentukan baik dengan seperangkat aturan (seperti ekspresi reguler atau <i>context-free grammar</i>) atau dengan mesin formal yang menerima input bahasa.</p>
+        <br>
+        <h2>Rujukan tambahan</h2>
+        <ol>
+            <li>Alves, M. H. F. (n.d.). Automata Theory and Languages [presentasi PowerPoint]. Diakses dari <a href="https://www.univ-orleans.fr/lifo/Members/Mirian.Halfeld/Cours/TLComp/TLComp-introTL.pdf" target="_blank" rel="noopener noreferrer">https://www.univ-orleans.fr/lifo/Members/Mirian.Halfeld/Cours/TLComp/TLComp-introTL.pdf</a></li>
+            <li>Scott, M. L. (2006). Programming Language Pragmatics. San Francisco: Morgan Kauffman.</li>
+        </ol>
+        <br>
     </body>
 </html>

@@ -1,5 +1,35 @@
-/* Untuk mengedit berkas CSS ini gunakan SCSS */
+/* Untuk mengedit berkas CSS ini gunakan pasangan SCSS-nya */
 body {
   padding: 20px;
   overflow-x: auto;
+}
+body p {
+  text-align: justify;
+}
+
+ul {
+  list-style: square;
+  margin-left: 20px;
+  padding: 5px;
+}
+ul li {
+  margin: 8px 0px;
+}
+
+ol {
+  margin-left: 20px;
+  padding: 5px;
+}
+ol li {
+  margin: 8px 0px;
+}
+
+.prompt {
+  margin-top: 4px;
+}
+
+.preliminary {
+  background-color: rgb(218, 218, 218);
+  border-radius: 10px;
+  padding: 10px;
 }/*# sourceMappingURL=materi.css.map */

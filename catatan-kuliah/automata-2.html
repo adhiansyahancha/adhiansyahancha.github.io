@@ -11,8 +11,50 @@
         <link rel="stylesheet" type="text/css" href="../css/catatan-kuliah.css" />
         <link rel="stylesheet" type="text/css" href="../css/materi.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
+        <div class="preliminary">
+            <h2>Pemahaman pendahuluan yang membantu (opsional):</h2>
+            <ul>
+                <li>Automata</li>
+                <li>Alfabet dan bahasa formal</li>
+            </ul>
+        </div>
+        <br>
         <h1>Regex</h1>
+        <p>Ekspresi reguler (sering disingkat sebagai <i>regex</i>) memiliki dua pengertian (dalam sepengetahuan penulis). Dalam pemrograman praktis, ekspresi reguler merupakan fitur pencocokan pola (<i>pattern matching</i>) yang berguna dalam mencari sebuah kata. Dalam teori pemrograman, ekspresi reguler adalah sebuah aturan yang mendefiniskan suatu bahasa. Dalam catatan ini saya akan membahas teorinya.</p>
+        <br>
+        <p>Sebuah bahasa disebut <i>reguler</i> jika terdapat <i>finite state automaton</i> (FSA) yang menerimanya. Dengan demikian, setiap bahasa bisa digambarkan dengan <i>nondeterministic finite automata</i> (NFA) atau <i>deterministic finite automata</i> (DFA). Bahasa formal yang didefiniskan dengan regex (\( r \)) dilambangkan dengan \( L(r) \).</p>
+        <br>
+        <p>Salah satu cara untuk menggambarkan bahasa reguler adalah dengan notasi ekspresi reguler. Notasi ini seringkali menggabungkan string dengan tiga operasi <i>reguler</i> yang meliputi penggabungan, penyambungan, dan bintang.</p> Untuk contoh, kita akan mendefinisikan \( \Sigma = \{ 0, 1 \} \).
+        <ul>
+            <li>
+                Penggabungan<br>
+                Simbol \( + \) atau \( \cup \) merupakan operatornya. Penggunaannya, \( R1+R2 \)<br>
+                \( L(0+1) = \{ 0, 1 \} \)<br>
+            </li>
+            <li>
+                Penyambungan<br>
+                Simbol titik (\( . \)) merupakan operatornya atau bisa juga ditulis langsung sambung. Penggunaannya, \( R1.R2 \) atau \( R1R2 \)<br>
+                \( L((0+1)10) = \{010, 110 \} \)<br>
+                \( L((0+1)(0+\epsilon)) = \{00, 0, 10, 1 \} \)<br>
+                \( L(0^+ 1) = \{ 01, 001, 0001, 00001,... \} \)
+            </li>
+            <li>
+                Bintang<br>
+                Simbol \( * \) merupakan operatornya. Cara kerjanya mirip dengan <i>Kleene closure</i><br>
+                \( L(0^*) = \{ \epsilon, 0, 00, 000, 0000, 00000,... \} \)<br>
+                \( L(0^* 1^*) = \{ \epsilon, 0, 1, 00, 11, 01, 001, 0001, 0111, 0011, ... \} \)
+            </li>
+        </ul>
+        <p>Perlu diketahui bahwa simbol \( + \) sebagai operator penggabungan memiliki fungsi yang berbeda pada praktiknya dan terkadang bisa dibingungkan dengan operasi penjumlahan dan <i>positive closure</i>.</p>
+        <br>
+        <h2>Rujukan tambahan</h2>
+        <ol>
+            <li>Goddard, W. (n.d.). Regular Expressions [presentasi PowerPoint]. Diakses dari <a href="https://people.computing.clemson.edu/~goddard/texts/theoryOfComputation/2.pdf" target="_blank" rel="noopener noreferrer">https://people.computing.clemson.edu/~goddard/texts/theoryOfComputation/2.pdf</a></li>
+        </ol>
+        <br>
     </body>
 </html>

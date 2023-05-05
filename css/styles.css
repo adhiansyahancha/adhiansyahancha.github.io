@@ -1,4 +1,4 @@
-/* Untuk mengedit gaya situs web edit melalui SCSS */
+/* Untuk mengedit berkas CSS ini gunakan pasangan SCSS-nya */
 /* Dirutkan menurut hirarki di HTML (kecuali selector *) */
 * {
   box-sizing: border-box;
