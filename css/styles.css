@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: rgb(242, 242, 242);
+  background-color: #F8F9FA;
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
   min-width: 300px;
 }
@@ -46,7 +46,7 @@ section {
 
 .button-appearance {
   background-color: #444647;
-  color: rgb(242, 242, 242);
+  color: #F8F9FA;
   text-align: center;
   padding: 10px;
   width: 100%;
@@ -57,7 +57,7 @@ section {
   overflow: hidden;
 }
 .button-appearance:hover {
-  background-color: rgb(242, 242, 242);
+  background-color: #F8F9FA;
   color: #444647;
   border: 1px solid #444647;
 }

@@ -1,9 +1,7 @@
 /* Untuk mengedit berkas CSS ini gunakan pasangan SCSS-nya */
 /* Dirutkan menurut hirarki di HTML (kecuali selector *) */
 
-$fonts: 'IBM Plex Sans', Helvetica, sans-serif;
-$am-grey: #444647;
-$am-white: rgb(242, 242, 242);
+@use 'variabel';
 
 * {
     box-sizing: border-box;
@@ -15,8 +13,8 @@ $am-white: rgb(242, 242, 242);
 }
 
 body {
-    background-color: $am-white;
-    font-family: $fonts;
+    background-color: variabel.$am-white;
+    font-family: variabel.$fonts;
     min-width: 300px;
 }
 
@@ -50,8 +48,8 @@ section {
 }
 
 .button-appearance {
-    background-color: $am-grey;
-    color: $am-white;
+    background-color: variabel.$am-grey;
+    color: variabel.$am-white;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -62,9 +60,9 @@ section {
     overflow: hidden;
 
     &:hover {
-        background-color: $am-white;
-        color: $am-grey;
-        border: 1px solid $am-grey;
+        background-color: variabel.$am-white;
+        color: variabel.$am-grey;
+        border: 1px solid variabel.$am-grey;
     }
 }
 

@@ -9,6 +9,13 @@ section {
   text-align: start;
 }
 
+code:not(.block) {
+  background-color: #e6e6e6;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -20,7 +27,7 @@ section {
 
 .topbar {
   grid-area: topbar;
-  background-color: #232323;
+  background-color: #444647;
   position: sticky;
   padding: 15px;
   display: flex;
@@ -28,10 +35,10 @@ section {
   align-items: center;
 }
 .topbar h1 {
-  color: white;
+  color: #F8F9FA;
 }
 .topbar a {
-  color: white;
+  color: #F8F9FA;
   text-decoration: none;
   font-size: 13px;
 }
@@ -75,6 +82,7 @@ section {
 
 @media only screen and (max-width: 800px) {
   .container {
+    display: grid;
     grid-template-columns: auto;
     grid-template-rows: 80px auto 210px;
     grid-template-areas: "topbar" "main" "left-side";
@@ -88,10 +96,5 @@ section {
   }
   .left-side {
     max-width: none;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  * {
-    scroll-behavior: smooth;
   }
 }/*# sourceMappingURL=catatan-kuliah.css.map */

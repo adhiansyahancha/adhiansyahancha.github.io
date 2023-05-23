@@ -11,7 +11,7 @@
 
 body {
     padding: 20px;
-    overflow-x: auto;
+    overflow-x: hidden;
 
     p {
         text-align: justify;
@@ -27,6 +27,10 @@ ol {
     @include am-lists;
 }
 
+textarea {
+    display: none;
+}
+
 .prompt {
     margin-top: 4px;
 }
@@ -35,4 +39,10 @@ ol {
     background-color: rgb(218, 218, 218);
     border-radius: 10px;
     padding: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        overflow-x: initial;
+    }
 }
