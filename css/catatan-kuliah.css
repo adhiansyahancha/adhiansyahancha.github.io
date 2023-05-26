@@ -9,13 +9,6 @@ section {
   text-align: start;
 }
 
-code:not(.block) {
-  background-color: #e6e6e6;
-  border-radius: 3px;
-  font-family: courier, monospace;
-  padding: 0 3px;
-}
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -54,6 +47,9 @@ code:not(.block) {
 .left-side ul {
   list-style: none;
   padding: 12px;
+  border: 1px solid black;
+  background-color: #444647;
+  color: white;
 }
 .left-side li {
   margin: 5px 0px;
@@ -65,12 +61,14 @@ code:not(.block) {
 .left-side .child a {
   font-size: 15px;
   text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 .left-side .child a:hover {
-  color: #595959;
+  color: hsl(0, 0%, 60%);
+  font-family: monospace;
 }
 .left-side .child a:focus {
-  color: #595959;
+  color: hsl(0, 0%, 39%);
 }
 
 .main {

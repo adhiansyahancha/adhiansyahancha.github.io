@@ -27,8 +27,31 @@ ol {
     @include am-lists;
 }
 
-textarea {
-    display: none;
+pre {
+	background-color: #262626;
+	color: white;
+	padding: 15px;
+	letter-spacing: 1.5px;
+	font-family: Consolas;
+	border-radius: 10px;
+	overflow: auto;
+    margin: 5px 0px;
+}
+
+code:not(.block) {
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    font-family: monospace;
+    padding: 0 3px;
+}
+
+code .block {
+    color: white;
+    font-size: 12px;
+}
+
+.algo {
+    overflow: auto;
 }
 
 .prompt {
@@ -39,6 +62,10 @@ textarea {
     background-color: rgb(218, 218, 218);
     border-radius: 10px;
     padding: 10px;
+}
+
+.textarea-flowchart-input {
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {

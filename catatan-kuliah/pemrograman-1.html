@@ -13,16 +13,15 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js" integrity="sha512-tBzZQxySO5q5lqwLWfu8Q+o4VkTcRGOeQGVQ0ueJga4A1RKuzmAu5HXDOXLEjpbKyV7ow9ympVoa6wZLEzRzDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js" integrity="sha512-emJotoOTtLFZ0H1ruR4v5pqW1mSen/JQCnjD4mcXwDT1sfZQmtqUDYv36X2S/iSun0kpgvvmBUWqpAupN104Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>hljs.highlightAll();</script>
     </head>
     <body>
         <h1>Dasar Algoritma</h1>
-        <p>Dalam ilmu komputer, algoritma pada umumnya bisa dipahami sebagai serangkaian instruksi yang logis dan sistematis untuk menyelesaikan masalah atau melakukan operasi. Nama "algoritma" berasal dari Latinisasi nama al-Khawarizmi (<i>algorismus</i>), seorang matematikawan berkebangsaan Persia yang terkenal atas bukunya mengenai aljabar, <i>al-Kitab al-Mukhtasar fī Hisab al-Jabr wal-Muqqbalah</i></p>
+        <p>Dalam ilmu komputer, algoritma pada umumnya bisa dipahami sebagai serangkaian instruksi yang logis dan sistematis untuk menyelesaikan masalah atau melakukan operasi. Nama "algoritma" berasal dari Latinisasi nama al-Khawarizmi (<i>algorismus</i>), seorang matematikawan Persia abad ke-9 yang terkenal atas karyanya mengenai aljabar, <i>al-Kitab al-Mukhtasar fī Hisab al-Jabr wal-Muqqbalah</i>.</p>
         <br>
         <p>Syarat-syarat algoritma yang baik, yaitu:</p>
         <ul>
             <li>Pemrosesan harus diselesaikan mungkin dengan efisien dan efektif</li>
+            <li>Ditulis dengan menggunakan bahasa yang jelas dan format yang mudah dipahami</li>
             <li>Output yang dihasilkan harus tepat dan benar</li>
             <li>Bisa dikembangkan lebih jauh berdasarkan kebutuhan yang ada</li>
             <li>Bersifat umum. Dengan kata lain, tidak hanya untuk menyelesaikan satu kasus saja</li>
@@ -40,7 +39,7 @@
         <p>Yang kedua, yaitu dengan menggunakan diagram alir (<i>flowchart</i>)</p>
         <div class="algo">
             <div id="algorithm1-chart"></div>
-            <textarea id="algorithm1" aria-label="Ini adalah kode program khusus untuk menggambar diagram">
+            <textarea class="textarea-flowchart-input" id="algorithm1" aria-label="Ini adalah kode program khusus untuk menggambar diagram">
                 // Sintaks: variable=>jenis_bagan: Teks
                 mulai=>start: Mulai
                 selesai=>end: Selesai
@@ -82,7 +81,7 @@
                         'yes-text': 'ya',
                         'no-text': 'tidak',
                         'arrow-end': 'block',              
-                        'scale': 0.7
+                        'scale': 0.6666
                     });
                 }
             </script>
@@ -90,25 +89,24 @@
         <br>
         <p>Yang ketiga, yaitu dengan menulis kode semunya (<i>pseudocode</i>). Ada banyak bentuk penulisannya, tetapi pada umumnya meniru bahasa Inggris yang baik.</p>
         <br>
-        <p>Berikut ini adalah bentuk yang sering ditemui di akademi:</p>
-        <pre><code class="block">
-            program MencariBilanganTerbesar
+        <p>Berikut ini adalah bentuk yang sering ditemui di perguruan tinggi Indonesia:</p>
+        <pre><code class="block">program MencariBilanganTerbesar
 
-            deklarasi
-                x, y, z: integer
+deklarasi
+    x, y, z: integer
                 
-            algoritma
-                read(x, y, z)
-                if x > y and x > z then
-                    write(x)
-                else if y > x and y > z then
-                    write(y)
-                else if z > x and z > y then
-                    write(z)
-                else   
-                    write("Tidak ada bilangan terbesar")
-                end
-        </code></pre>
+algoritma
+    read(x, y, z)
+    if x > y and x > z then
+        write(x)
+    else if y > x and y > z then
+        write(y)
+    else if z > x and z > y then
+        write(z)
+    else   
+        write("Tidak ada bilangan terbesar")
+    end
+</code></pre>
         <br>
     </body>
 </html>
