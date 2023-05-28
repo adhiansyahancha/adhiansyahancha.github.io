@@ -65,7 +65,6 @@ section {
 }
 .left-side .child a:hover {
   color: hsl(0, 0%, 60%);
-  font-family: monospace;
 }
 .left-side .child a:focus {
   color: hsl(0, 0%, 39%);

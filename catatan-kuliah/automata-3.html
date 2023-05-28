@@ -11,8 +11,16 @@
         <link rel="stylesheet" type="text/css" href="../css/catatan-kuliah.css" />
         <link rel="stylesheet" type="text/css" href="../css/materi.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
         <h1>Aturan Produksi</h1>
+        <p>Untuk memahami aturan produksi, kita harus memahami konsep <i>simbol terminal</i> dan <i> simbol nonterminal</i>. Simbol terminal merupakan simbol dasar, biasanya berupa karakter alfabet kecil. Simbol nonterminal merupakam simbol yang bisa diturunkan menjadi simbol terminal atau nonterminal lainnya. Simbol ini biasanya berupa karakter alfabet besar, terutama huruf \( S \) sebagai simbol mulai.</p>
+        <br>
+        <p>Aturan produksi merupakan bentuk aturan penulisan ulang yang menetapkan bahwa beberapa string bisa ditulis ulang (dengan kata lain, disubstitusikan) seluruhnya atau sebagiannya. Aturan produksi memiliki bentuk sebagai berikut.</p>
+        <p>$$ A \rightarrow abcd $$</p>
+        <p>Ruas kiri produksi menghasilkan ruas kanan. Jika aturan tersebut berlaku untuk string \( abAB \), penulisan ulangnya akan menjadi \( ababcdB \).</p>
+        https://math.hws.edu/eck/cs229/s21/FoundationsOfComputation.pdf
     </body>
 </html>

@@ -19,8 +19,8 @@ body {
 }
 
 ul {
-    list-style: square;
     @include am-lists;
+    list-style: square;
 }
 
 ol {
@@ -38,6 +38,11 @@ pre {
     margin: 5px 0px;
 }
 
+code.block {
+    color: white;
+    font-size: 15px;
+}
+
 code:not(.block) {
     background-color: #e6e6e6;
     border-radius: 3px;
@@ -45,12 +50,19 @@ code:not(.block) {
     padding: 0 3px;
 }
 
-code .block {
-    color: white;
-    font-size: 12px;
+table {
+    svg {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    td {
+        padding: 8px;
+    }
 }
 
-.algo {
+.flowchart {
     overflow: auto;
 }
 

@@ -27,6 +27,21 @@
             <li>Bersifat umum. Dengan kata lain, tidak hanya untuk menyelesaikan satu kasus saja</li>
             <li>Terdapat kriteria untuk berhenti</li>
         </ul>
+        <p>Selain itu, terdapat tiga struktur dasar dalam algoritma.</p>
+        <ol>
+            <li>
+                Struktur runtunan<br>
+                Struktur ini berbentuk instruksi-instruksi yang akan dieksekusi secara beruntun (berurutan).
+            </li>
+            <li>
+                Struktur pemilihan atau percabangan<br>
+                Struktur ini berbentuk instruksi yang akan dieksekusi apabila terdapat kondisi/syarat yang memenuhinya.
+            </li>
+            <li>
+                Struktur perulangan<br>
+                Struktur ini berbentuk instruksi yang akan dieksekusi secara berulang hingga kondisi terpenuhi.
+            </li>
+        </ol>
         <h1>Notasi algoritma</h1>
         <p>Yang pertama, yaitu dengan menggunakan kalimat deskriptif. Di bawah ini adalah kailmat deskripsi untuk algoritma mencari bilangan terbesar dari ketiga bilangan</p>
         <ol>
@@ -37,14 +52,14 @@
             <li>Terakhir, jika <code>z</code> lebih besar dari <code>x</code> dan <code>y</code>, cetak <code>z</code> sebagai bilangan terbesar</li>
         </ol>
         <p>Yang kedua, yaitu dengan menggunakan diagram alir (<i>flowchart</i>)</p>
-        <div class="algo">
-            <div id="algorithm1-chart"></div>
-            <textarea class="textarea-flowchart-input" id="algorithm1" aria-label="Ini adalah kode program khusus untuk menggambar diagram">
+        <div class="flowchart">
+            <div id="MencariBilanganTerbesar"></div>
+            <textarea class="textarea-flowchart-input" id="MencariBilanganTerbesar-src">
                 // Sintaks: variable=>jenis_bagan: Teks
                 mulai=>start: Mulai
                 selesai=>end: Selesai
                 baca=>inputoutput: (I) Baca nilai x, y, dan z
-                dekl=>operation: Deklarasi x, y, z sebagai integer
+                dekl=>operation: Nyatakan x, y, z sebagai integer
                 cetak=>inputoutput: (O) Cetak nilai terbesar
                 lainnya=>inputoutput: (O) Tidak ada bilangan terbesar
                 jika_x=>condition: x > y dan x > z?
@@ -64,9 +79,9 @@
             <script>
                 window.onload = () => {
                     let chart1 = flowchart.parse(
-                        document.getElementById('algorithm1').value
+                        document.getElementById('MencariBilanganTerbesar-src').value
                     );
-                    chart1.drawSVG('algorithm1-chart', {
+                    chart1.drawSVG('MencariBilanganTerbesar', {
                         'x': -20,
                         'y': 0,
                         'line-width': 2,
@@ -87,9 +102,9 @@
             </script>
         </div>
         <br>
-        <p>Yang ketiga, yaitu dengan menulis kode semunya (<i>pseudocode</i>). Ada banyak bentuk penulisannya, tetapi pada umumnya meniru bahasa Inggris yang baik.</p>
+        <p>Yang ketiga, yaitu dengan menulis kode semunya (<i>pseudocode</i>). Ada banyak bentuk penulisannya, tetapi pada umumnya meniru bahasa natural yang baik.</p>
         <br>
-        <p>Berikut ini adalah bentuk yang sering ditemui di perguruan tinggi Indonesia:</p>
+        <p>Berikut ini adalah bentuk yang sering ditemui di perguruan tinggi:</p>
         <pre><code class="block">program MencariBilanganTerbesar
 
 deklarasi

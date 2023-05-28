@@ -13,11 +13,6 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js" integrity="sha512-tBzZQxySO5q5lqwLWfu8Q+o4VkTcRGOeQGVQ0ueJga4A1RKuzmAu5HXDOXLEjpbKyV7ow9ympVoa6wZLEzRzDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js" integrity="sha512-emJotoOTtLFZ0H1ruR4v5pqW1mSen/JQCnjD4mcXwDT1sfZQmtqUDYv36X2S/iSun0kpgvvmBUWqpAupN104Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <style>
-            td {
-                padding: 1px;
-            }
-        </style>
     </head>
     <body>
         <h1>Bagan Alir</h1>
@@ -82,27 +77,103 @@
                     <td>              </td>
                 </tr>
                 <tbody>
-                <script>
-                    window.onload = () => {
-                        flowchart.parse(
-                            document.getElementById('terminal-src').value
-                        ).drawSVG('terminal');
-                        flowchart.parse(
-                            document.getElementById('process-src').value
-                        ).drawSVG('process');
-                        flowchart.parse(
-                            document.getElementById('io-src').value
-                        ).drawSVG('io');
-                        flowchart.parse(
-                            document.getElementById('cond-src').value
-                        ).drawSVG('cond');
-                        flowchart.parse(
-                            document.getElementById('subr-src').value
-                        ).drawSVG('subr');
-                    }
-                </script>
             </table>
         </div>
+        <p>Berikut ini merupakan contoh struktur dasar algoritma dengan bagan alir.</p>
         <br>
+        <div class="flowchart">
+            <table>
+            <thead>
+                <tr>
+                    <th>Runtunan</th>
+                    <th>Pemilihan</th>
+                    <th>Perulangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="runtunan"></div>
+                        <textarea class="textarea-flowchart-input" id="runtunan-src">
+                            a=>start: Mulai
+                            b=>operation: Instruksi 1
+                            c=>operation: Instruksi 2
+                            d=>operation: Instruksi 3
+                            e=>operation: Instruksi 4
+                            f=>end: Selesai
+                            
+                            a->b->c->d->e->f
+                        </textarea>
+                    </td>
+                    <td>
+                        <div id="pemilihan"></div>
+                        <textarea class="textarea-flowchart-input" id="pemilihan-src">
+                            a=>start: Mulai
+                            x=>operation: Pernyataan A
+                            b=>condition: Kondisi X
+                            c=>operation: Instruksi N
+                            d=>inputoutput: Output Y
+                            e=>operation: Instruksi Z
+                            f=>end: Selesai
+
+                            a->x->b
+                            b(yes@Y)->d->f
+                            b(no@N)->c->e->f
+                        </textarea>
+                    </td>
+                    <td>
+                        <div id="perulangan"></div>
+                        <textarea class="textarea-flowchart-input" id="perulangan-src">
+                            a=>start: Mulai
+                            b=>operation: Init S
+                            c=>condition: Kondisi X
+                            d=>operation: Instruksi Y
+                            e=>operation: Tambah X+1
+                            f=>inputoutput: Output N
+                            g=>end: Selesai
+                            
+                            a->b->c
+                            c(yes@Y, left)->d->e->c->g
+                            c(no@N, bottom)->f->g
+                        </textarea>                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <script id="flowchart-js-load">
+            let flowchartScale = 1;
+
+            if (window.matchMedia("(max-width: 800px)").matches) {
+                flowchartScale = 0.7;
+            }
+
+            window.onload = () => {
+                flowchart.parse(
+                    document.getElementById('terminal-src').value
+                ).drawSVG('terminal');
+                flowchart.parse(
+                    document.getElementById('process-src').value
+                ).drawSVG('process');
+                flowchart.parse(
+                    document.getElementById('io-src').value
+                ).drawSVG('io');
+                flowchart.parse(
+                    document.getElementById('cond-src').value
+                ).drawSVG('cond');
+                flowchart.parse(
+                    document.getElementById('subr-src').value
+                ).drawSVG('subr');
+                flowchart.parse(
+                    document.getElementById('runtunan-src').value
+                ).drawSVG('runtunan', { 'line-width': 2, 'scale': flowchartScale });
+                flowchart.parse(
+                    document.getElementById('pemilihan-src').value
+                ).drawSVG('pemilihan', { 'line-width': 2, 'scale': flowchartScale });
+                flowchart.parse(
+                    document.getElementById('perulangan-src').value
+                ).drawSVG('perulangan', { 'y': 1, 'line-width': 2, 'scale': flowchartScale });
+            }
+        </script>
     </body>
 </html>
