@@ -97,6 +97,7 @@ section {
 #myactivity i {
   margin: 0 6px;
   transform: scale(1);
+  color: black;
 }
 #myactivity i:hover {
   margin: 0 20px;

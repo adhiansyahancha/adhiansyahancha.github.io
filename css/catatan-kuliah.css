@@ -42,7 +42,7 @@ section {
 .left-side {
   grid-area: left-side;
   overflow: auto;
-  max-width: 210px;
+  height: 100%;
 }
 .left-side ul {
   list-style: none;

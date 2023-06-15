@@ -74,32 +74,8 @@
                 jika_y(no)->jika_z
 
                 jika_z(yes)->cetak->selesai
-                jika_z(no)->lainnya->selesai
+                jika_z(no, bottom)->lainnya->selesai
             </textarea>
-            <script>
-                window.onload = () => {
-                    let chart1 = flowchart.parse(
-                        document.getElementById('MencariBilanganTerbesar-src').value
-                    );
-                    chart1.drawSVG('MencariBilanganTerbesar', {
-                        'x': -20,
-                        'y': 0,
-                        'line-width': 2,
-                        'maxwidth': 1,
-                        'line-length': 50,
-                        'text-margin': 20,
-                        'font-size': 14,
-                        'font-color': 'black',
-                        'line-color': 'black',
-                        'element-color': 'black',
-                        'fill': 'white',     
-                        'yes-text': 'ya',
-                        'no-text': 'tidak',
-                        'arrow-end': 'block',              
-                        'scale': 0.6666
-                    });
-                }
-            </script>
         </div>
         <br>
         <p>Yang ketiga, yaitu dengan menulis kode semunya (<i>pseudocode</i>). Ada banyak bentuk penulisannya, tetapi pada umumnya meniru bahasa natural yang baik.</p>
@@ -123,5 +99,29 @@ algoritma
     end
 </code></pre>
         <br>
+        <script>
+            window.onload = () => {
+                let chart1 = flowchart.parse(
+                    document.getElementById('MencariBilanganTerbesar-src').value
+                );
+                chart1.drawSVG('MencariBilanganTerbesar', {
+                    'x': 0,
+                    'y': 0,
+                    'line-width': 2,
+                    'maxwidth': 1,
+                    'line-length': 50,
+                    'text-margin': 20,
+                    'font-size': 14,
+                    'font-color': 'black',
+                    'line-color': 'black',
+                    'element-color': 'black',
+                    'fill': 'white',     
+                    'yes-text': 'ya',
+                    'no-text': 'tidak',
+                    'arrow-end': 'block',              
+                    'scale': 0.8
+                });
+            }
+        </script>
     </body>
 </html>
