@@ -1,20 +1,22 @@
 /* Untuk mengedit berkas CSS ini gunakan pasangan SCSS-nya */
 /* Dirutkan menurut hirarki di HTML (kecuali selector *) */
-
-@use 'variabel';
-
 * {
     box-sizing: border-box;
     font-size: 18px;
     padding: 0;
     margin: 0;
-    // color: black;
     /* border: 1px solid black; */
 }
 
+:root {
+    --fonts: 'IBM Plex Sans', Helvetica, sans-serif;
+    --am-grey: #444647;
+    --am-white: #F8F9FA;
+}
+
 body {
-    background-color: variabel.$am-white;
-    font-family: variabel.$fonts;
+    background-color: var(--am-white);
+    font-family: var(--fonts);
     min-width: 300px;
 }
 
@@ -23,46 +25,46 @@ section {
     text-align: justify;
 }
 
-#welcome {
-    height: 100vh;
+.container {
+    align-items: center;
     display: grid;
     grid-template-columns: 58% auto 41%;
-    align-items: center;
+    height: 100vh;
 }
 
-#left {
-    text-align: right;
+.left {
     padding: 35px;
+    text-align: right;
     width: 100%;
 }
 
 .divider {
-    width: 0;
-    height: 70%;
-    display: inline;
     border-right: 2px solid black;
+    display: inline;
+    height: 70%;
+    width: 0;
 }
 
-#right {
+.right {
     width: 100%;
 }
 
-.button-appearance {
-    background-color: variabel.$am-grey;
-    color: variabel.$am-white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    height: 45px;
+.button-skin {
+    background-color: var(--am-grey);
     border-radius: 15px;
-    text-decoration: none;
+    color: var(--am-white);
     font-weight: 700;
+    height: 45px;
     overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
 
     &:hover {
-        background-color: variabel.$am-white;
-        color: variabel.$am-grey;
-        border: 1px solid variabel.$am-grey;
+        background-color: var(--am-white);
+        border: 1px solid var(--am-grey);
+        color: var(--am-grey);
     }
 }
 
@@ -71,22 +73,22 @@ section {
     transition-timing-function: ease-out;
 }
 
-#profile-picture {
+.profile-picture {
     border-radius: 25px;
     width: 120px;
     height: 120px;
 }
 
-#name {
+.name {
     font-size: 40px;
 }
 
-#intro {
+.intro {
     margin: 12px 0px 12px 12px 12px;
     padding-left: 25%;
 }
 
-#myactivity {
+.myactivity {
     margin-top: 18px;
 
     p {
@@ -114,38 +116,38 @@ section {
     }
 }
 
-#more-info {
+.more-info {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
 
-#microsite {
+.microsite {
     margin: 10px 0;
 
     li {
-        list-style: none;
-        padding: 12px 35px;
-        display: flex;
-        justify-content: center;
         align-items: center;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 12px 35px;
     }
 }
-/*  --------------------------------------- */
 
+/* --------------------------------------- */
 @media only screen and (max-width: 600px) {
     section {
         padding: 35px;
     }
 
-    #welcome {
+    .welcome {
         height: unset;
         display: flex;
         flex-direction: column;
     }
 
-    #intro {
+    .intro {
         margin: 7px 0 0 0;
         padding: unset;
     }
@@ -154,7 +156,7 @@ section {
         display: none;
     }
 
-    #left {
+    .left {
         text-align: center;
     }
 }
