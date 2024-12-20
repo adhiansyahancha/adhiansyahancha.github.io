@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
-    <title>Bengkel Pemrograman Adhiansyah</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhiansyah Ancha</title>
+    <style>
+        body {
+            font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .MainBody {
+            display: flex;
+            flex: 1;
+        }
+        .MainContent {
+            flex: 1;
+        }
+        .Aside {
+            flex: 0 0 12em;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <img class="profile-picture" alt="Foto profil narablog"
-                src="https://www.gravatar.com/avatar/9347839ba8ab254751beb03baab5a1d8?s=250" />
-            <p class="name">Adhiansyah Ancha</p>
-            <p class="intro">Selamat datang! Saya adalah seorang mahasiswa Rekayasa Perangkat Lunak dan narablog</p>
-            <div class="myactivity">
-                <p>Kerjaanku:</p>
-                <a href="https://www.freecodecamp.org/adhiansyahancha" aria-label="Narablog di FreeCodeCamp">
-                    <i class="fa-brands fa-free-code-camp fa-2x smooth-transition"></i>
-                </a>
-                <a href="https://github.com/adhiansyahancha" aria-label="Narablog di GitHub">
-                    <i class="fa-brands fa-github fa-2x smooth-transition"></i>
-                </a>
-            </div>
+    <div class="Header"></div>
+    <div class="MainBody">
+        <div class="Aside"></div>
+        <div class="MainContent">
+            <h1 style="text-align: center;">Adhiansyah Ancha</h1>
+        <p>Halo! Aku adalah praktisi pemrograman komputer. Aku bisa memprogram dengan JavaScript, tetapi saat ini
+            belajar bahasa C untuk mendalami ilmu komputer dan membuat perangkat lunak "rasa GNU/Linux".</p>
+        <p>Aku membuat beberapa "projek yang kamu bisa buat sendiri" karena aku percaya bahwa ini adalah cara belajar
+            pemrograman dengan efektif dan tanpa menghabiskan waktu melihat tutorial. Aku membuat beberapa di sini.</p>
+        <p>Dalam sementara waktu, aku akan menyusun sumber-sumber yang berkaitan dengan disiplin pengembangan perangkat
+            lunak. Terlalu sedikit dan tidak praktis dari yang kutelusuri.</p>
+        <p>Jika ada yang ingin tahu buku ilmu komputer yang bagus dan bebas tersedia di internet, aku menyarankan <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html"><i>Structure and Interpretation of Computer Programs</i></a>.</p>
         </div>
-        <div class="divider"></div>
-        <div class="right">
-            <p class="more-info">Lebih lanjut</p>
-            <ul class="microsite">
-                <!-- <li><a class="button-skin" href="../catatan-kuliah/index.html">Catatan Kuliah</a></li> -->
-                <li><a class="button-skin" href="#contact">Kontak</a></li>
-            </ul>
-        </div>
+        <div class="Aside"></div>
     </div>
+    <div class="Footer"></div>
 </body>
 
 </html>
