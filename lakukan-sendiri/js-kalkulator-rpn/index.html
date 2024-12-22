@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator RPN</title>
+    <style>
+        .CalculatorBody {
+            width: 40%;
+            margin: auto;
+        }
+        .NumPad {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        .ValueDisplay {
+            background-color: #0a0a23;
+            margin: 10px;
+            padding: 10px;
+        }
+        .ValueDisplay > * {
+            width: 100%;
+            padding: 2px 10px;
+            margin: 4px 0;
+            text-align: right;
+            box-sizing: border-box;
+            font-size: 24px;
+            border: #0a0a23;
+            background-color: #0a0a23;
+            color: white;
+        }
+        .Num {
+            background-color: #0a0a23;
+            color: #ffffff;
+            border: none;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .NumEnter {
+            grid-column-start: 2;
+            grid-column-end: span 2;
+        }
+        .Num:hover {
+            background-color: #585858;
+            transition: 0.1s;
+        }
+        .Num:focus {
+            background-color: #b1b1b1;
+        }
+        .Num:active {
+            background-color: #ffbf00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="CalculatorBody">
+            <div class="ValueDisplay">
+                <input type="text" name="stack-expression" id="StackExpression" value="0" size="0" readonly>
+                <input type="text" name="math-input" id="MathInput" value="" placeholder="0" size="0" readonly>
+            </div>
+            <div class="NumPad" id="NumPadEvent">
+                <button class="Num" value="7">7</button>
+                <button class="Num" value="8">8</button>
+                <button class="Num" value="9">9</button>
+                <button class="Num" value="+">+</button>
+                <button class="Num" value="4">4</button>
+                <button class="Num" value="5">5</button>
+                <button class="Num" value="6">6</button>
+                <button class="Num" value="-">-</button>
+                <button class="Num" value="1">1</button>
+                <button class="Num" value="2">2</button>
+                <button class="Num" value="3">3</button>
+                <button class="Num" value="*">*</button>
+                <button class="Num" value="C">C</button>
+                <button class="Num" value="0">0</button>
+                <button class="Num" value=".">.</button>
+                <button class="Num" value="/">/</button>
+                <button class="Num" value="DEL">DEL</button>
+                <button class="Num NumEnter" value="ENTER">ENTER</button>
+                <button class="Num" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="rpn.js" defer></script>
+</body>
+
+</html>
