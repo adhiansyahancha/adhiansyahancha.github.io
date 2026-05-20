@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="/aset/index.css">
+    <title>Kode Kruwet</title>
+</head>
+
+<body class="rwt-body">
+    <div class="pure-g rwt-container" role="document">
+        <header class="pure-u-1" role="banner">
+            <a class="pure-g rwt-logo" href="/">
+                <img class="pure-u-4-24" src="/aset/KodeKruwetBaru.png" alt="">
+                <h1 class="pure-u-8-24">kodekruwet</h1>
+            </a>
+        </header>
+        <main class="pure-u-1 pure-u-md-18-24" role="main">
+            <header>
+                <h1>{{ title }}</h1>
+            </header>
+            <article>
+                <i>Diterbitkan pada {{ date | date: "%d %B %Y" }}</i>
+                {{ content }}
+            </article>
+        </main>
+        <aside class="pure-u-1 pure-u-md-6-24 rwt-aside">
+            <div class="rwt-gap">
+                <div class="rwt-card">
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Tentang</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
