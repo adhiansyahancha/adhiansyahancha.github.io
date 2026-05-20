@@ -1,4 +1,4 @@
 # adhiansyahancha.github.io
-Sumber kode situs web pribadi ini.
+Weblog pribadi terbuka
 
 [https://adhiansyahancha.github.io/](https://adhiansyahancha.github.io/)
