@@ -1,0 +1,16 @@
+{
+  "name": "kodekruwet.github.io",
+  "version": "1.0.0",
+  "description": "Situs web Kode Kruwet - Rekayasa Perangkat Lunak itu menarik",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/kodekruwet.github.io/"
+  },
+  "keywords": [],
+  "author": "Adhiansyah Ancha",
+  "license": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}
